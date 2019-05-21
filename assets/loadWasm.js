@@ -8,6 +8,8 @@
 // will "boot" the module and make it ready to use. Currently browsers
 // don't support natively imported WebAssembly as an ES module, but
 // eventually the manual initialization won't be required!
+
+// NOTE: this is relative to where your JavaScript modules are located
 import { default as init } from './pkg/wasm_starter.js';
 
 export var wasm = null;
@@ -24,6 +26,9 @@ export async function importWasm() {
   // exports which is the same as importing the `*_bg` module in other
   // modes
   console.log('initialing wasm');
+
+  // NOTE: this is relative to wherever your HTML files are located
   wasm = await init('./assets/pkg/wasm_starter_bg.wasm');
+
   console.log('wasm initialized');
 }
