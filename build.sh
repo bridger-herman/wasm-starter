@@ -1,5 +1,7 @@
 #!/bin/sh
 
+WASM_LIB_NAME=wasm-starter
+
 set -ex
 
 # Note that typically we'd use `wasm-pack` to build the crate, but the
@@ -7,6 +9,6 @@ set -ex
 # support in `wasm-pack` yet. Support will be added soon though!
 
 cargo build --target wasm32-unknown-unknown --release
-wasm-bindgen ./target/wasm32-unknown-unknown/release/wasm_starter.wasm --out-dir ./assets/pkg --web --no-typescript
+wasm-bindgen ./target/wasm32-unknown-unknown/release/$WASM_LIB_NAME.wasm --out-dir ./assets/pkg --web --no-typescript
 
 python3 -m http.server
