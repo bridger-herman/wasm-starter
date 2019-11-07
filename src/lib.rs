@@ -11,6 +11,7 @@ pub fn main() -> Result<(), JsValue> {
     wasm_logger::init_with_level(log::Level::Trace)
         .map_err(|_| JsValue::from("Failed to initialize logger"))?;
 
+
     info!("Hello from Rust!");
     Ok(())
 }

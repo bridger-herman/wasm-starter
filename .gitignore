@@ -1,4 +1,8 @@
 /target
-**/*.rs.bk*.orig
+**/*.rs.bk
+*.orig
 *.swp
 Cargo.lock
+
+# If you want to deploy wasm on GH pages, comment this out for a release
+/assets/pkg

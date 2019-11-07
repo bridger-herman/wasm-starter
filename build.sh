@@ -1,6 +1,8 @@
 #!/bin/sh
 
-WASM_LIB_NAME=wasm-starter
+# Should match the name in the [lib] section of Cargo.toml
+# Note: you'll also need to change the names in loadWasm.js
+WASM_LIB_NAME=wasm_starter
 
 set -ex
 

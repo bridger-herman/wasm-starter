@@ -25,7 +25,7 @@ export async function importWasm() {
   // Also note that the promise, when resolved, yields the wasm module's
   // exports which is the same as importing the `*_bg` module in other
   // modes
-  console.log('initialing wasm');
+  console.log('initialzing wasm');
 
   // NOTE: this is relative to wherever your HTML files are located
   wasm = await init('./assets/pkg/wasm_starter_bg.wasm');
